@@ -13,8 +13,8 @@ module Punditry
 
     module ClassMethods
       def skip_authorization(options = {})
-        skip_before_action(:verify_authorized, options)
-        skip_before_action(:verify_policy_scoped, options)
+        skip_after_action(:verify_authorized, options)
+        skip_after_action(:verify_policy_scoped, options)
       end
     end
 
