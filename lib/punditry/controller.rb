@@ -4,7 +4,7 @@ module Punditry
   module Controller
     extend ActiveSupport::Concern
 
-    include Pundit
+    include Pundit::Authorization
 
     included do
       after_action :verify_authorized
